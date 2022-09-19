@@ -36,7 +36,7 @@ function! readme_viewer#completion(ArgLead, CmdLine, CursorPos) abort
     let funcname = 'readme_viewer#jetpack#completion'
   else
     call readme_viewer#error('Plugin manager cannot be detected')
-    return
+    return []
   endif
 
   return call(funcname, [a:ArgLead, a:CmdLine, a:CursorPos])
