@@ -8,6 +8,40 @@ let s:plugin_managers = {
 
 let s:plugin_manager = s:plugin_managers[g:readme_viewer#plugin_manager]
 
+function! readme_viewer#open(args, mods) abort
+  if g:readme_viewer#plugin_manager ==# 'dein.vim' || exists('*dein#begin')
+    let funcname = 'readme_viewer#dein#open'
+  elseif g:readme_viewer#plugin_manager ==# 'vim-plug' || exists('*plug#begin')
+    let funcname = 'readme_viewer#plug#open'
+  elseif g:readme_viewer#plugin_manager ==# 'minpac' || exists('*minpac#init')
+    let funcname = 'readme_viewer#minpac#open'
+  elseif g:readme_viewer#plugin_manager ==# 'vim-jetpack' || exists('*jetpack#begin')
+    let funcname = 'readme_viewer#jetpack#open'
+  else
+    call readme_viewer#error('Plugin manager cannot be detected')
+    return
+  endif
+
+  return call(funcname, [a:args, a:mods])
+endfunction
+
+function! readme_viewer#completion(ArgLead, CmdLine, CursorPos) abort
+  if g:readme_viewer#plugin_manager ==# 'dein.vim' || exists('*dein#begin')
+    let funcname = 'readme_viewer#dein#completion'
+  elseif g:readme_viewer#plugin_manager ==# 'vim-plug' || exists('*plug#begin')
+    let funcname = 'readme_viewer#plug#completion'
+  elseif g:readme_viewer#plugin_manager ==# 'minpac' || exists('*minpac#init')
+    let funcname = 'readme_viewer#minpac#completion'
+  elseif g:readme_viewer#plugin_manager ==# 'vim-jetpack' || exists('*jetpack#begin')
+    let funcname = 'readme_viewer#jetpack#completion'
+  else
+    call readme_viewer#error('Plugin manager cannot be detected')
+    return
+  endif
+
+  return call(funcname, [a:ArgLead, a:CmdLine, a:CursorPos])
+endfunction
+
 function! readme_viewer#open_buffer(path, name, ...) abort
   let mods = a:0 > 0 ? a:1 : ''
   let open_help_buffer = get(g:, 'readme_viewer#open_help_buffer', v:true)
