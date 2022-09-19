@@ -59,6 +59,10 @@ INTERFACE					*readme-viewer-interface*
 ------------------------------------------------------------------------------
 COMMANDS					*readme-viewer-commands*
 
+:ReadmeOpen {plugin}				*:ReadmeOpen*
+	Open {plugin}'s README file. The command detects plugin manager
+	automatically.
+
 :DeinReadme {plugin}				*:DeinReadme*
 :PlugReadme {plugin}				*:PlugReadme*
 :PackReadme {plugin}				*:PackReadme*

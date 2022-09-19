@@ -23,6 +23,8 @@ elseif g:readme_viewer#plugin_manager ==# 'vim-jetpack' || exists('*jetpack#begi
   command! -nargs=1 -bar -complete=customlist,readme_viewer#jetpack#completion
         \ JetpackReadme call readme_viewer#jetpack#open(<q-args>, <q-mods>)
 endif
+command! -nargs=1 -bar -complete=customlist,readme_viewer#completion
+      \ ReadmeOpen call readme_viewer#open(<q-args>, <q-mods>)
 
 if has('nvim')
   if g:readme_viewer#plugin_manager ==# 'packer.nvim' || exists(':PackerInstall')
