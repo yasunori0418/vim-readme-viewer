@@ -1,8 +1,9 @@
 *readme-viewer.txt*	Viewing plugin's README(.md) easily like vim help
 
-Author: Hibiki <4513echo@gmail.com>
+Author: Hibiki <mail@4513echo.dev>
 License: MIT License
 URL: https://github.com/4513ECHO/vim-readme-viewer
+Last change: 2023 May 16
 
 ==============================================================================
 CONTENTS					*readme-viewer-contents*
