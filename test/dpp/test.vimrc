@@ -22,7 +22,7 @@ if &runtimepath !~# s:cache
 endif
 
 if dpp#min#load_state(s:cache)
-  call dpp#make_state(s:cache, 'config.ts')
+  call dpp#make_state(s:cache, s:config)
   augroup dpp_init
     autocmd!
     autocmd User Dpp:makeStatePost echomsg 'dpp make_state() is done'
