@@ -13,6 +13,7 @@ Please read [help](doc/readme_viewer.txt) for details.
    * [Features](#features)
    * [Installation](#installation)
       * [<a href="https://github.com/Shougo/dein.vim">dein.vim</a>](#deinvim)
+      * [<a href="https://github.com/Shougo/dpp.vim">dpp.vim</a>](#dppvim)
       * [<a href="https://github.com/junegunn/vim-plug">vim-plug</a>](#vim-plug)
       * [<a href="https://github.com/k-takata/minpac">minpac</a>](#minpac)
       * [<a href="https://github.com/wbthomason/packer.nvim">packer.nvim</a>](#packernvim)
@@ -45,6 +46,7 @@ easily like vim help file. Viewing vim help file is very easy. Only
 If you are using other plugin managers, please try:
 
 ```vim
+:DppReadme vim-readme-viewer
 :PlugReadme vim-readme-viewer  " for vim-plug
 :PackReadme vim-readme-viewer  " for minpac
 :PackerReadme vim-readme-viewer  " for packer.nvim
@@ -64,6 +66,7 @@ it outside vim.
 
 - Support many plugin managers
   - [dein.vim](https://github.com/Shougo/dein.vim)
+  - [dpp.vim](https://github.com/Shougo/dpp.vim)
   - [vim-plug](https://github.com/junegunn/vim-plug)
   - [minpac](https://github.com/k-takata/minpac)
   - [packer.nvim](https://github.com/wbthomason/packer.nvim)
@@ -92,6 +95,8 @@ hook_add = '''
 let g:readme_viewer#plugin_manager = 'dein.vim'
 '''
 ```
+
+### [dpp.vim](https://github.com/Shougo/dpp.vim)
 
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
@@ -180,6 +185,7 @@ call ddu#start({'sources': [{'name': 'readme_viewer'}]})
   - [ ] runtimepath based plugin manager
   - [ ] buildin package system based plugin manager
   - [x] [dein.vim](https://github.com/Shougo/dein.vim)
+  - [ ] [dpp.vim](https://github.com/Shougo/dpp.vim)
   - [x] [vim-plug](https://github.com/junegunn/vim-plug)
   - [x] [minpac](https://github.com/k-takata/minpac)
   - [x] [packer.nvim](https://github.com/wbthomason/packer.nvim)
