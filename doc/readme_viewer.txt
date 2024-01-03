@@ -40,6 +40,7 @@ manager. However, it sometimes may fail. I recommend that you set manually
 
 >
 	let g:readme_viewer#plugin_manager = 'dein.vim'  " for dein.vim
+	let g:readme_viewer#plugin_manager = 'dpp.vim'  " for dpp.vim
 	let g:readme_viewer#plugin_manager = 'vim-plug'  " for vim-plug
 	let g:readme_viewer#plugin_manager = 'minpac'  " for minpac
 	let g:readme_viewer#plugin_manager = 'packer.nvim'  " for packer.nvim
@@ -51,7 +52,7 @@ vim-plug's README.md, you register vim-plug as a plugin.
 >
 	Plug 'junegunn/vim-plug'
 
-Note: This plugin is working with |dein.vim|, |vim-plug|, |minpac|,
+Note: This plugin is working with |dein.vim|, |dpp|, |vim-plug|, |minpac|,
 |jetpack| and |packer.nvim| now.
 
 ==============================================================================
@@ -65,6 +66,7 @@ COMMANDS					*readme-viewer-commands*
 	automatically.
 
 :DeinReadme {plugin}				*:DeinReadme*
+:DppReadme {plugin}				*:DppReadme*
 :PlugReadme {plugin}				*:PlugReadme*
 :PackReadme {plugin}				*:PackReadme*
 :PackerReadme {plugin}				*:PackerReadme*
@@ -84,6 +86,7 @@ COMMANDS					*readme-viewer-commands*
 FUNCTIONS					*readme-viewer-functions*
 
 						*readme_viewer#dein#get()*
+						*readme_viewer#dpp#get()*
 						*readme_viewer#plug#get()*
 						*readme_viewer#minpac#get()*
 						*readme_viewer#jetpack#get()*
@@ -97,6 +100,7 @@ readme_viewer#get([{plugin-name}])		*readme_viewer#get()*
 	manager's `get` function. Please see above.
 
 						*readme_viewer#dein#open()*
+						*readme_viewer#dpp#open()*
 						*readme_viewer#plug#open()*
 						*readme_viewer#minpac#open()*
 						*readme_viewer#jetpack#open()*
@@ -124,6 +128,7 @@ g:readme_viewer#plugin_manager		*g:readme_viewer#plugin_manager*
 	plugin manager. I recommend that you set it manually.
 	value		command~
 	"|dein.vim|"	|:DeinReadme|
+	"|dpp.vim|"	|:DppReadme|
 	"|vim-plug|"	|:PlugReadme|
 	"|minpac|"	|:PackReadme|
 	"|packer.nvim|"	|:PackerReadme|
