@@ -1,5 +1,6 @@
 let s:plugin_managers = {
       \ 'dein.vim': 'dein',
+      \ 'dpp.vim': 'dpp',
       \ 'vim-plug': 'plug',
       \ 'minpac': 'mimpac',
       \ 'packer.nvim': 'packer',
@@ -11,6 +12,8 @@ let s:plugin_manager = s:plugin_managers[g:readme_viewer#plugin_manager]
 function! readme_viewer#open(args, mods) abort
   if g:readme_viewer#plugin_manager ==# 'dein.vim' || exists('*dein#begin')
     let funcname = 'readme_viewer#dein#open'
+  elseif g:readme_viewer#plugin_manager ==# 'dpp.vim' || exists('*dpp#make_state')
+    let funcname = 'readme_viewer#dpp#open'
   elseif g:readme_viewer#plugin_manager ==# 'vim-plug' || exists('*plug#begin')
     let funcname = 'readme_viewer#plug#open'
   elseif g:readme_viewer#plugin_manager ==# 'minpac' || exists('*minpac#init')
@@ -28,6 +31,8 @@ endfunction
 function! readme_viewer#completion(ArgLead, CmdLine, CursorPos) abort
   if g:readme_viewer#plugin_manager ==# 'dein.vim' || exists('*dein#begin')
     let funcname = 'readme_viewer#dein#completion'
+  elseif g:readme_viewer#plugin_manager ==# 'dpp.vim' || exists('*dpp#make_state')
+    let funcname = 'readme_viewer#dpp#completion'
   elseif g:readme_viewer#plugin_manager ==# 'vim-plug' || exists('*plug#begin')
     let funcname = 'readme_viewer#plug#completion'
   elseif g:readme_viewer#plugin_manager ==# 'minpac' || exists('*minpac#init')
