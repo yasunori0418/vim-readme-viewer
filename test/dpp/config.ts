@@ -43,6 +43,7 @@ export class Config extends BaseConfig {
         lazy: false,
         repo: "yasunori0418/vim-readme-viewer",
         name: "vim-readme-viewer",
+        rev: "feat-dpp_support"
       },
     ] as Plugin[];
 
