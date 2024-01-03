@@ -13,6 +13,9 @@ let g:readme_viewer#plugin_manager = get(g:,
 if g:readme_viewer#plugin_manager ==# 'dein.vim' || exists('*dein#begin')
   command! -nargs=1 -bar -complete=customlist,readme_viewer#dein#completion
         \ DeinReadme call readme_viewer#dein#open(<q-args>, <q-mods>)
+elseif g:readme_viewer#plugin_manager ==# 'dpp.vim' || exists('*dpp#make_state')
+  command! -nargs=1 -bar -complete=customlist,readme_viewer#plug#completion
+        \ DppReadme call readme_viewer#dpp#open(<q-args>, <q-mods>)
 elseif g:readme_viewer#plugin_manager ==# 'vim-plug' || exists('*plug#begin')
   command! -nargs=1 -bar -complete=customlist,readme_viewer#plug#completion
         \ PlugReadme call readme_viewer#plug#open(<q-args>, <q-mods>)
