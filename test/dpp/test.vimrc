@@ -1,6 +1,7 @@
 set nocompatible
 
 let s:cache = expand('<sfile>:p:h') . '/cache/dpp'
+let s:config = expand('<sfile>:p:h') . '/config.ts'
 let s:repos = [
 \   'Shougo/dpp.vim',
 \   'Shougo/dpp-ext-installer',
@@ -20,3 +21,10 @@ if &runtimepath !~# s:cache
   endfor
 endif
 
+if dpp#min#load_state(s:cache)
+  call dpp#make_state(s:cache, 'config.ts')
+  augroup dpp_init
+    autocmd!
+    autocmd User Dpp:makeStatePost echomsg 'dpp make_state() is done'
+  augroup END
+endif
