@@ -98,6 +98,8 @@ let g:readme_viewer#plugin_manager = 'dein.vim'
 
 ### [dpp.vim](https://github.com/Shougo/dpp.vim)
 
+Depends on your liking configuration.
+
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
