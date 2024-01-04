@@ -128,7 +128,7 @@ g:readme_viewer#plugin_manager		*g:readme_viewer#plugin_manager*
 	plugin manager. I recommend that you set it manually.
 	value		command~
 	"|dein.vim|"	|:DeinReadme|
-	"|dpp.vim|"	|:DppReadme|
+	"|dpp|.vim"	|:DppReadme|
 	"|vim-plug|"	|:PlugReadme|
 	"|minpac|"	|:PackReadme|
 	"|packer.nvim|"	|:PackerReadme|
